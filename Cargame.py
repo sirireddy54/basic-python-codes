@@ -1,15 +1,23 @@
 
+started= False
 
-
-while(0<1):  
+while True:  
     #command= str(input()).lower()
-    command= str(input()).casefold()
+    command= str(input(">")).casefold()
     if(command=="help"):
         print("start to start the car \n Stop to stop the car \n quit to quit the program")
     elif(command=="start"):
-        print("Car Strated....Ready to go")
+        if(started):
+            print("Car is already started!")
+        else:
+            started= True
+            print("Car Strated....Ready to go")
     elif(command=="stop"):
-        print("Car Stopped")
+        if(not started):
+            print("Car is already stopped")
+        else:
+            started= False
+            print("Car Stopped")
     elif(command=="quit"):
         break
     else:
