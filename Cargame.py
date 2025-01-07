@@ -2,7 +2,8 @@
 
 
 while(0<1):  
-    command= str(input()).lower()
+    #command= str(input()).lower()
+    command= str(input()).casefold()
     if(command=="help"):
         print("start to start the car \n Stop to stop the car \n quit to quit the program")
     elif(command=="start"):
